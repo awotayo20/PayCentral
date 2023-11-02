@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: var(--outfit);
+}
+
+:root {
+  --outfit: 'Outfit', sans-serif;
+  --main-color: #A0A0A0;
+}
+
+
+
+.menuList ul {
+  display: flex;
+  gap: 32px;
+}
+
+.menuList ul li {
+  font-family: var(--main-color);
+  font-weight: 500;
+  font: 16px;
+  color: #464646;
+  cursor: pointer;
+}
+
+.registration button {
+  font-family: var(--main-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header {
+  border-bottom: 2px solid #D2D2D2;
+  opacity: 0.9;
+  background: rgba(21, 21, 21, 0.00);
+  backdrop-filter: blur(120px);
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
