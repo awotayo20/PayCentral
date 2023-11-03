@@ -2,7 +2,6 @@ import React from "react";
 
 export default function CarouselItems() {
   return (
-    <div>
       <div className="w-[877px] flex gap-4 items-center">
         <div className="flex gap-4 items-center w-[206px]">
           <div className=" w-16 h-16 bg-[#434445]">{/* image */}</div>
@@ -21,6 +20,5 @@ export default function CarouselItems() {
           struggle is a thing of the past.”
         </p>
       </div>
-    </div>
   );
 }

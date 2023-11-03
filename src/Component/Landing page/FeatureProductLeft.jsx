@@ -12,27 +12,28 @@ export default function FeatureProductLeft() {
             </div>
             <div className="w-[350px] flex flex-col gap-3">
               <div>
-                <h2 className="font-[700]">Payment company</h2>
-                <p className="text-[0.875rem] font-[400] text-[#6A6A6A]">
+                <h2 className="font-[700] text-xl">Payment company</h2>
+                <p className="text-[13px] font-[400] text-[#6A6A6A] w-full">
                   Short bio: Lorem ipsum dolor sit amet consectetur. Donec quam
                   donec vitae lectus adipiscing.
                 </p>
               </div>
 
-              <div className="flex gap-[8px] items-center justify-between">
-                <h3 className="text-[0.875rem] font-[500] text-[#000]">
-                  Methods Offered:
-                </h3>
-                <div className="bg-[#F1F3F4] px-[1rem] py-[0.25rem] flex justify-center items-center rounded-full font-[500]">
-                  Label
-                </div>
-                <div className="bg-[#F1F3F4] px-[1rem] py-[0.25rem] flex justify-center items-center rounded-full font-[500]">
-                  Label
-                </div>
-                <div className="bg-[#F1F3F4] px-[1rem] py-[0.25rem] flex justify-center items-center rounded-full font-[500]">
-                  Label
+              <div className="flex items-center gap-1">
+                <h3 className="text-[14px] font-[500]">Methods Offered:</h3>
+                <div className="flex items-center text-[14px] font-[500] gap-[12px]">
+                  <h3 className="rounded-full px-[16px] py-[4px] bg-[#F1F3F4]">
+                    Label
+                  </h3>
+                  <h3 className="rounded-full px-[16px] py-[4px] bg-[#F1F3F4]">
+                    Label
+                  </h3>
+                  <h3 className="rounded-full px-[16px] py-[4px] bg-[#F1F3F4]">
+                    Label
+                  </h3>
                 </div>
               </div>
+
               <div className="flex items-center gap-2">
                 <div className="w-[32px] h-[26px] bg-[#F1F3F4] rounded-2xl">
                   {/* country logo */}
@@ -53,8 +54,8 @@ export default function FeatureProductLeft() {
                 <h3>Reviews</h3>
               </div>
               <div className="flex text-[#878787] bg-[#F1F3F4] px-2 py-1 justify-center items-center text-[0.75rem] gap-1 rounded-3xl">
-                <h3>1.2k</h3>
-                <h3>Reviews</h3>
+                <h3>3/5</h3>
+                <h3>Rating</h3>
               </div>
             </div>
           </div>

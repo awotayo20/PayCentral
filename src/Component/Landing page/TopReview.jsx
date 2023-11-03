@@ -6,7 +6,7 @@ export default function TopReview() {
     <>
       <div className="w-[430px] flex flex-col gap-4">
         <div className="w-[410px]">
-          <h2 className="text-[#464646] text-lg">Top reviewed products</h2>
+          <h2 className="text-[#464646] text-[18px]">Top reviewed products</h2>
 
           <ReviewProduct />
           <ReviewProduct />

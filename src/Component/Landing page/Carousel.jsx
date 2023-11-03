@@ -10,7 +10,7 @@ export default function Carousel() {
         <Splide
           options={{
             width: "100%",
-            padding: "12rem",
+            padding: "13vw",
             rewind: true,
             perPage: 1,
             autoplay: "play",
@@ -19,8 +19,9 @@ export default function Carousel() {
             drag: "free",
             start: 2,
           }}
+          
         >
-          <SplideSlide>
+          <SplideSlide className="p-5">
             <CarouselItems />
           </SplideSlide>
           <SplideSlide>
