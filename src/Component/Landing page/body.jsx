@@ -43,12 +43,14 @@ export default function body() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <FeatureProductLeft />
-            <FeatureProductLeft />
-            <FeatureProductLeft />
-            <FeatureProductLeft />
-            <FeatureProductLeft />
-            <FeatureProductLeft />
+            <FeatureProductLeft name='Ethiopia, Africa'/>
+            <FeatureProductLeft name='Peru, South America'/>
+            <FeatureProductLeft name='Nigeria, Africa'/>
+            <FeatureProductLeft name='Nigeria, Africa'/>
+            <FeatureProductLeft name='Ethiopia, Africa'/>
+            <FeatureProductLeft name='Ethiopia, Africa'/>
+            <FeatureProductLeft name='Ethiopia, Africa'/>
+            
           </div>
         </div>
 

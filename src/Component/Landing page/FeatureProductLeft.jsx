@@ -1,7 +1,7 @@
 import React from "react";
 import { CgPentagonDown } from "react-icons/cg";
 
-export default function FeatureProductLeft() {
+export default function FeatureProductLeft(props) {
   return (
     <>
       <div className="p-4 border-[1px] border-solid border-[#EEE]">
@@ -38,7 +38,7 @@ export default function FeatureProductLeft() {
                 <div className="w-[32px] h-[26px] bg-[#F1F3F4] rounded-2xl">
                   {/* country logo */}
                 </div>
-                <h3 className="font-[500] text-sm">Ethiopia, Africa</h3>
+                <h3 className="font-[500] text-sm">{props.name}</h3>
               </div>
             </div>
           </div>
@@ -50,12 +50,10 @@ export default function FeatureProductLeft() {
 
             <div className="flex flex-col gap-2">
               <div className="flex text-[#878787] bg-[#F1F3F4] px-2 py-1 justify-center items-center text-[0.75rem] gap-1 rounded-3xl">
-                <h3>1.2k</h3>
-                <h3>Reviews</h3>
+                <h3>1.2k Reviews</h3>
               </div>
               <div className="flex text-[#878787] bg-[#F1F3F4] px-2 py-1 justify-center items-center text-[0.75rem] gap-1 rounded-3xl">
-                <h3>3/5</h3>
-                <h3>Rating</h3>
+                <h3>3/5 Rating</h3>
               </div>
             </div>
           </div>
