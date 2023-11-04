@@ -54,7 +54,8 @@ export default function header() {
             </svg>
           </div>
         </button>
-        <button className="text-[#fff] bg-[#464646] p-[8px]"><Link to='/SignUp'>Sign Up</Link></button>
+        <button className="text-[#fff] bg-[#464646] p-[8px]"><a href="/SignUp">SignUp</a></button>
+        
       </div>
     </div>
   );
