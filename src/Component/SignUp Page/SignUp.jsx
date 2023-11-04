@@ -66,12 +66,10 @@ export default function SignUp() {
           <div className="h-[40px] w-full flex justify-between">
             <div className="w-[117px] h-full"></div>
 
-            <Link to='/JobStatus'>
+            
             <button className="w-[128px] h-full bg-[#000] flex justify-center items-center cursor-pointer">
-              <h3 className="text-white text-[20px] font-[500] text-center">
-                Next
-              </h3>
-            </button></Link>
+              <a href="/JobStatus" className="text-white text-[20px] font-[500] text-center">Next</a>
+            </button>
           </div>
         </form>
       </div>
