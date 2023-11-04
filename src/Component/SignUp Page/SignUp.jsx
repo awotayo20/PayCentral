@@ -1,5 +1,8 @@
 import React from "react";
 import SignUpHeader from "./SignUpHeader";
+import { Link } from "react-router-dom";
+import JobStatus from "./JobStatus";
+
 
 export default function SignUp() {
   return (
@@ -48,7 +51,7 @@ export default function SignUp() {
                 <input
                   type="radio"
                   name="registration purpose"
-                  value="Business"
+                  value="Individual"
                   className="w-[32px] h-[32px]"
                 />
                 <span className="text-[18px] font-[500]">An Individual</span>
@@ -63,11 +66,12 @@ export default function SignUp() {
           <div className="h-[40px] w-full flex justify-between">
             <div className="w-[117px] h-full"></div>
 
+            <Link to='/JobStatus'>
             <button className="w-[128px] h-full bg-[#000] flex justify-center items-center cursor-pointer">
               <h3 className="text-white text-[20px] font-[500] text-center">
                 Next
               </h3>
-            </button>
+            </button></Link>
           </div>
         </form>
       </div>

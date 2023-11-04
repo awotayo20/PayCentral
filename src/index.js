@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import JobStatus from './Component/SignUp Page/JobStatus';
 
 import {
   createBrowserRouter,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/SignUp",
     element: <SignUp/>,
+  },
+  {
+    path: "/JobStatus",
+    element: <JobStatus/>,
   },
 ]);
 
