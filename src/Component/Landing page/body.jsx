@@ -12,13 +12,12 @@ export default function body() {
     <>
       <div className="flex">
         <div className="max-w-[760px] p-[50px]">
-          <div className="py-[24px] px-[16px] flex justify-between max-w-[753px] items-center bg-[#F1F3F4]">
+          <div className="py-[24px] px-[16px] flex justify-between w-[753px] items-center bg-[#F1F3F4]">
             <div>
               <h2 className="text-2xl font-[400]">
-                Welcome to{" "}
-                <span className="text-2xl font-[700]">PayCentral!</span>
+                Welcome to<span className="text-[22px] font-[700]">PayCentral!👋🏽</span>
               </h2>
-              <p className="text-[1rem] font-[500]">
+              <p className="text-[16px] font-[500]">
                 Discover, Compare, and Pay Seamlessly Anywhere in the World.
               </p>
               <button className="text-[#002D84] text-[1rem]">
