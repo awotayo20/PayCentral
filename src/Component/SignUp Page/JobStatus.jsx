@@ -1,6 +1,8 @@
 import React from "react";
 import SignUpHeader from "./SignUpHeader";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export default function JobStatus() {
   const [selected, setSelected] = useState('');
@@ -73,6 +75,18 @@ export default function JobStatus() {
                 <p className="text-[14px] font-[300] ">This will inform the kind of payments clients can pay you with.</p>
               </div>
             </div>
+
+            <div className="h-[40px] w-full flex justify-between">
+            <div className="w-[117px] h-full"></div>
+
+            
+            <Link to='/'>
+              <button className="w-[128px] h-full bg-[#000] flex justify-center items-center cursor-pointer">
+              <a href="/JobStatus" className="text-white text-[20px] font-[500] text-center">Next</a>
+              </button>
+            </Link>
+
+          </div>
           </form>
         </div>
       </div>
