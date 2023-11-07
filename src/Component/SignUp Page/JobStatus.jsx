@@ -2,6 +2,7 @@ import React from 'react'
 import SignUpHeader from './SignUpHeader'
 
 export default function JobStatus() {
+  
   return (
     <>
     <div className='w-[1024px] mx-auto'>
@@ -48,9 +49,14 @@ export default function JobStatus() {
 
             {/* more details for employed */}
             <div>
-              <div>
                 <h3 className='font-[500] text-[18px]'>Please Select Employment type:</h3>
-              </div>
+                <div>
+                  <div className='flex'>
+                    <option value="Freelancer" className=' border-black border rounded-full'>Freelancer</option>
+                    <option value="Freelancer">Full time</option>
+                    <option value="Freelancer"></option>
+                  </div>
+                </div>
             </div>
           </div>
           </form>

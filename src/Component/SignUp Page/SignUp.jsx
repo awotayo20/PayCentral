@@ -1,7 +1,6 @@
 import React from "react";
 import SignUpHeader from "./SignUpHeader";
 import { Link } from "react-router-dom";
-import JobStatus from "./JobStatus";
 
 
 export default function SignUp() {
@@ -67,9 +66,10 @@ export default function SignUp() {
             <div className="w-[117px] h-full"></div>
 
             
+            <Link to='/JobStatus'>
             <button className="w-[128px] h-full bg-[#000] flex justify-center items-center cursor-pointer">
-              <a href="/JobStatus" className="text-white text-[20px] font-[500] text-center">Next</a>
-            </button>
+              <h3 className="text-white text-[20px] font-[500] text-center">Next</h3>
+            </button></Link>
           </div>
         </form>
       </div>
