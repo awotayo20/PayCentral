@@ -76,7 +76,7 @@ export default function JobStatus() {
               </div>
             </div>
 
-            <div className="h-[40px] w-full flex justify-between">
+            <div className="h-[40px] w-full flex justify-between mt-[48px]">
             <div className="w-[117px] h-full"></div>
 
             
