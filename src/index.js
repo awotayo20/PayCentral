@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import SignUp from './Component/SignUp Page/SignUp';
+import Industry from './Component/SignUp Page/Industry';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/JobStatus",
     element: <JobStatus/>,
+  },
+  {
+    path: "/Industry",
+    element: <Industry/>,
   },
 ]);
 
