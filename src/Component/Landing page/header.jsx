@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function header() {
   return (
@@ -53,7 +54,9 @@ export default function header() {
             </svg>
           </div>
         </button>
-        <button className="text-[#fff] bg-[#464646] p-[8px]"><a href="/SignUp">Samign Up</a></button>
+        <Link to='/SignUp'>
+          <button className="text-[#fff] bg-[#464646] p-[8px]"><a href="/SignUp">Sign Up</a></button>
+        </Link>
         
       </div>
     </div>
