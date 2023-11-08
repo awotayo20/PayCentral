@@ -6,10 +6,17 @@ import { Link } from "react-router-dom";
 
 export default function JobStatus() {
   const [selected, setSelected] = useState('');
+  const [inputChecked, setInputChecked] = useState('Not Employed')
 
   const handleChange = (e) => {
     setSelected(e.target.value);
   };
+
+
+  const handleChecked = e => {
+    const getChecked = e.target.value;
+    setInputChecked(getChecked)
+  }
 
   return (
     <>
@@ -35,7 +42,9 @@ export default function JobStatus() {
                     type="radio"
                     name="Job Status"
                     value="Employed"
-                    className="w-[32px] h-[32px]"
+                    className="employed w-[32px] h-[32px]"
+                    onClick={handleChecked}
+
                   />
                   <span className="text-[18px] font-[500]">Employed</span>
                 </div>
@@ -48,13 +57,18 @@ export default function JobStatus() {
                     name="Job Status"
                     value="Not Employed"
                     className="w-[32px] h-[32px]"
+                    checked = {inputChecked === 'Not Employed'}
+                    onClick={handleChecked}
                   />
                   <span className="text-[18px] font-[500]">Not Employed</span>
                 </div>
               </div>
 
               {/* more details for employed */}
-              <div className="flex flex-col gap-[16px]">
+
+              {
+                inputChecked === 'Not Employed' && (
+                  <div className="flex flex-col gap-[16px]">
                 <h3 className="font-[500] text-[18px]">
                   Please Select Employment type: <span>{selected}</span>
                 </h3>
@@ -70,10 +84,16 @@ export default function JobStatus() {
                   </select>
                 </div>
 
-                <input type="text" placeholder="Enter Job role" className="px-[16px] py=[6px] w-full h-[56px] outline-none" required/>
-                <input type="text" placeholder="Enter your location" className="px-[16px] py=[6px] w-full h-[56px] outline-none" required/>
+                <input type="text" placeholder="Enter Job role" className="px-[16px] py=[6px] w-full h-[56px] outline-none bg-[#DEDEDE]" required/>
+                <input type="text" placeholder="Enter your location" className="px-[16px] py=[6px] w-full h-[56px] outline-none bg-[#DEDEDE]" required/>
                 <p className="text-[14px] font-[300] ">This will inform the kind of payments clients can pay you with.</p>
               </div>
+                )
+              }
+
+
+
+              
             </div>
 
             <div className="h-[40px] w-full flex justify-between mt-[48px]">

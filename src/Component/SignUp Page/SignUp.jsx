@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import SignUpHeader from "./SignUpHeader";
 import { Link } from "react-router-dom";
 
 
 
+
 export default function SignUp() {
+
+  const [checked, setChecked] = useState(false)
+
+
+
   return (
     <>
       <div className="max-w-[1024px] mx-auto">
