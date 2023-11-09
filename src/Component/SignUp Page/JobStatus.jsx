@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function JobStatus() {
   const [selected, setSelected] = useState('');
-  const [inputChecked, setInputChecked] = useState('Not Employed')
+  const [inputChecked, setInputChecked] = useState('Employed')
 
   const handleChange = (e) => {
     setSelected(e.target.value);

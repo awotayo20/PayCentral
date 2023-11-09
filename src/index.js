@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import SignUp from './Component/SignUp Page/SignUp';
 import Industry from './Component/SignUp Page/Industry';
+import OtherDetails from './Component/SignUp Page/OtherDetails';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/Industry",
     element: <Industry/>,
+  },
+  {
+    path: "/OtherDetails",
+    element: <OtherDetails/>,
   },
 ]);
 

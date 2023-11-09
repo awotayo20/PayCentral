@@ -38,7 +38,7 @@ export default function Industry() {
             <div className="w-[117px] h-full"></div>
 
             
-            <Link to='/JobStatus'>
+            <Link to='/OtherDetails'>
               <button className="w-[128px] h-full bg-[#000] flex justify-center items-center cursor-pointer">
               <a href="/JobStatus" className="text-white text-[20px] font-[500] text-center">Next</a>
               </button>
