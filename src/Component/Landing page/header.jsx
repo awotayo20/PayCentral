@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function header() {
   return (
-    <div className="header h-[68px]">
+    <div className="header h-[68px] w-[1440px]">
       <h2 className="font-[500] text-2xl text-[#464646]">Pay Central</h2>
 
       <form className="relative">

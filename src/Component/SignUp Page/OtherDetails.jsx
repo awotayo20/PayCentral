@@ -26,23 +26,23 @@ export default function OtherDetails() {
                         <div className='flex gap-[13px]'>
                             <div>
                                 <label htmlFor="first name" className='text-[14px] mb-[10px] font-[500]'>Frist name*</label>
-                                <input type="text" name="First name" id="" placeholder='Enter your first name' className='h-[48px] px-[16px] border-[1.2px] border-black w-full'/>
+                                <input type="text" name="First name" id="" placeholder='Enter your first name' className='h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]'/>
                             </div>
 
                             <div>
                                 <label htmlFor="Last name" className='text-[14px] mb-[10px] font-[500]'>Last name*</label>
-                                <input type="text" name="Last name" id="" placeholder='Enter your first name' className='h-[48px] px-[16px] border-[1.2px] border-black w-full'/>
+                                <input type="text" name="Last name" id="" placeholder='Enter your first name' className='h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]'/>
                             </div>
                         </div>
 
                         <div>
                                 <label htmlFor="Email address" className='text-[14px] mb-[10px] font-[500]'>Email address*</label>
-                                <input type="email" name="email address" id="" placeholder='Enter your email address' className='h-[48px] px-[16px] border-[1.2px] border-black w-full'/>
+                                <input type="email" name="email address" id="" placeholder='Enter your email address' className='h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]'/>
                         </div>
 
                         <div>
                                 <label htmlFor="Password" className='text-[14px] mb-[10px] font-[500]'>Password*</label>
-                                <input type="password" name="password" id="" placeholder='Create a Password' className='h-[48px] px-[16px] border-[1.2px] border-black w-full'/>
+                                <input type="password" name="password" id="" placeholder='Create a Password' className='h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]'/>
                         </div>
 
                         <div className='flex items-center gap-2'>

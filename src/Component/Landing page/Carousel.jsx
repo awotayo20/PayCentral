@@ -6,7 +6,7 @@ import CarouselItems from "./CarouselItems";
 export default function Carousel() {
   return (
     <>
-      <div className="w-full h-[200px] bg-[#F1F3F4] flex items-center">
+      <div className="w-[1440px] h-[200px] bg-[#F1F3F4] flex items-center">
         <Splide
           options={{
             width: "100%",
