@@ -1,3 +1,4 @@
+import { set } from "mongoose";
 import { ReactComponent as IndustrySvg } from "../../../images/industry.svg"
 
 export default function Industry({data, setData}) {
@@ -21,8 +22,10 @@ export default function Industry({data, setData}) {
             </p>
 
             <select
+              
               name="industry"
               id=""
+              onChange={(e)=> setData({...data, industry: e.target.value})}
               className="industry py-[6px] h-[56px] w-full outline-none bg-[#DEDEDE] text-[18px] font-[500]"
             >
               <option value="">
@@ -31,12 +34,12 @@ export default function Industry({data, setData}) {
                 </div>{" "}
                 Select your industry
               </option>
-              <option value="">Engineering</option>
-              <option value="">Product Management</option>
-              <option value="">Design</option>
-              <option value="">Sales</option>
-              <option value="">Data Science</option>
-              <option value="">Engineering</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Product Management">Product Management</option>
+              <option value="Design">Design</option>
+              <option value="Sales">Sales</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Engineering">Engineering</option>
             </select>
             <p className="text-[14px] font-[400]">
               E.g Tech, Finance, Marketing, Healthcare

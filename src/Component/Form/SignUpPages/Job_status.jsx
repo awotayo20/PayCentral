@@ -1,17 +1,5 @@
-import React, { useState } from "react";
-
 export default function Job_status({data, setData}) {
-  const [selected, setSelected] = useState("");
-  const [inputChecked, setInputChecked] = useState("");
-
-  const handleChange = (e) => {
-    setSelected(e.target.value);
-  };
-
-  const handleChecked = (e) => {
-    const getChecked = e.target.value;
-    setInputChecked(getChecked);
-  };
+  console.log(data.job_status)
 
   return (
     <>
@@ -29,7 +17,7 @@ export default function Job_status({data, setData}) {
         <div>
           <div className="flex gap-[12px] flex-col">
 
-          {inputChecked == 'Employed' ?
+          {data.job_status == 'Employed' ?
             <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
             <div className="flex items-center gap-[8px]">
               <input
@@ -37,7 +25,7 @@ export default function Job_status({data, setData}) {
                 name="Job Status"
                 value="Employed"
                 className="employed w-[32px] h-[32px]"
-                onClick={handleChecked}
+                onChange={(e)=>setData({...data, job_status: e.target.value})}
               />
               <span className="text-[18px] font-[500]">Employed</span>
             </div>
@@ -50,7 +38,7 @@ export default function Job_status({data, setData}) {
                   name="Job Status"
                   value="Employed"
                   className="employed w-[32px] h-[32px]"
-                  onClick={handleChecked}
+                  onChange={(e)=>setData({...data, job_status: e.target.value})}
                 />
                 <span className="text-[18px] font-[500]">Employed</span>
               </div>
@@ -62,7 +50,7 @@ export default function Job_status({data, setData}) {
 
 
             
-            {inputChecked == 'Not Employed' ? 
+            {data.job_status == 'Not Employed' ? 
               <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
               <div className="flex items-center gap-[8px]">
                 <input 
@@ -70,8 +58,7 @@ export default function Job_status({data, setData}) {
                   name="Job Status"
                   value="Not Employed"
                   className="w-[32px] h-[32px]"
-                  checked={inputChecked === "Not Employed"}
-                  onClick={handleChecked}
+                  onChange={(e)=>setData({...data, job_status: e.target.value})}
                 />
                 <span className="text-[18px] font-[500]">Not Employed</span>
               </div>
@@ -84,8 +71,7 @@ export default function Job_status({data, setData}) {
                   name="Job Status"
                   value="Not Employed"
                   className="w-[32px] h-[32px]"
-                  checked={inputChecked === "Not Employed"}
-                  onClick={handleChecked}
+                  onChange={(e)=>setData({...data, job_status: e.target.value})}
                 />
                 <span className="text-[18px] font-[500]">Not Employed</span>
               </div>
@@ -95,15 +81,15 @@ export default function Job_status({data, setData}) {
 
             {/* more details for employed */}
 
-            {inputChecked === "Not Employed" && (
+            {data.job_status === "Not Employed" && (
               <div className="flex flex-col gap-[16px]">
                 <h3 className="font-[500] text-[18px]">
-                  Please Select Employment type: <span>{selected}</span>
+                  Please Select Employment type: 
                 </h3>
                 <div>
                   <select
-                    value={selected}
-                    onChange={handleChange}
+                    value={data.job_status}
+                    onChange={(e)=> setData({...data, employment_type: e.target.value})}
                     className="w-full"
                   >
                     <option value="">Select an option</option>
@@ -118,12 +104,14 @@ export default function Job_status({data, setData}) {
 
                 <input
                   type="text"
+                  onChange={(e)=>setData({...data, job_role: e.target.value})}
                   placeholder="Enter Job role"
                   className="px-[16px] py=[6px] w-full h-[56px] outline-none bg-[#DEDEDE]"
                   required
                 />
                 <input
                   type="text"
+                  onChange={(e)=>setData({...data, country: e.target.value})}
                   placeholder="Enter your location"
                   className="px-[16px] py=[6px] w-full h-[56px] outline-none bg-[#DEDEDE]"
                   required
