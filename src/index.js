@@ -11,6 +11,7 @@ import {
 import SignUp from './Component/SignUp Page/SignUp';
 import Industry from './Component/SignUp Page/Industry';
 import OtherDetails from './Component/SignUp Page/OtherDetails';
+import SignUpForm from './Component/Form/SignUpForm';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/SignUp",
-    element: <SignUp/>,
+    element: <SignUpForm/>,
   },
   {
     path: "/JobStatus",
