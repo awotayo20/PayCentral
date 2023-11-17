@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-export default function Job_status() {
+export default function Job_status({data, setData}) {
   const [selected, setSelected] = useState("");
-  const [inputChecked, setInputChecked] = useState("Employed");
+  const [inputChecked, setInputChecked] = useState("");
 
   const handleChange = (e) => {
     setSelected(e.target.value);

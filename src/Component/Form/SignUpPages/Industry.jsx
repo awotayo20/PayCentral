@@ -1,6 +1,6 @@
 import { ReactComponent as IndustrySvg } from "../../../images/industry.svg"
 
-export default function Industry() {
+export default function Industry({data, setData}) {
   return (
     <div>
         <div className="flex w-[284px] justify-between mx-auto my-[3rem]">

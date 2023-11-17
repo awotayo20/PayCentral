@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PersonalDetails() {
+export default function PersonalDetails({data, setData}) {
   return (
     <div>
         <div className="flex w-[284px] justify-between mx-auto my-[3rem]">
@@ -10,7 +10,7 @@ export default function PersonalDetails() {
           <div className="bg-[#000] w-[56px] h-[6px] rounded-full"></div>
         </div>
 
-        <div className="w-[660px] text-[24px] mx-auto">
+        <div className="w-[660px] text-[24px] mx-auto px-[24px]">
           <h2 className="text-[24px] font-[500]">
             Connect with our friendly community exploring and sharing payment
             innovations.
@@ -110,7 +110,6 @@ export default function PersonalDetails() {
                 </div>
               </div>
               
-              <button className='w-full p-[8px] bg-black text-white mx-auto text-center'>Join PayCentral</button>
               
             </form>
           </div>

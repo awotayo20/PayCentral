@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 
-export default function Account_type() {
+export default function Account_type( {data, setData} ) {
 
-  const [account_type, setAccount_type] = useState('')
-  console.log(setAccount_type)
-  console.log(account_type)
+  const [account_typeValue, setAccount_type] = useState('')
 
   return (
     <div>
@@ -30,7 +28,7 @@ export default function Account_type() {
           </div>
 
           <div className="flex gap-[12px] flex-col">
-            { account_type == "Business" ? 
+            { account_typeValue == "Business" ? 
             <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
               <div className="flex items-center gap-[8px]">
                 <input
@@ -68,7 +66,7 @@ export default function Account_type() {
 
             
 
-            { account_type == "Individual" ?
+            { account_typeValue == "Individual" ?
             <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
             <div className="flex items-center gap-[8px]">
               <input
