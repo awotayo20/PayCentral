@@ -1,7 +1,8 @@
-import { set } from "mongoose";
-import { ReactComponent as IndustrySvg } from "../../../images/industry.svg"
+import { useState } from "react";
 
 export default function Industry({details, setDetails}) {
+  const [industry, setIndustry] = useState('')
+  console.log(industry)
   return (
     <div>
         <div className="flex w-[284px] justify-between mx-auto my-[3rem]">
@@ -22,17 +23,13 @@ export default function Industry({details, setDetails}) {
             </p>
 
             <select
-              
               name="industry"
-              id=""
-              onChange={(e)=>setDetails({...details, account_type: e.target.value})}
+              // onChange={(e)=> setDetails({...details, industry: e.target.value})}
+              onChange={(e)=>setDetails({...details, industry: e.target.value})}
+
               className="industry py-[6px] h-[56px] w-full outline-none bg-[#DEDEDE] text-[18px] font-[500]"
             >
-              <option value="">
-                <div>
-                  <IndustrySvg />
-                </div>{" "}
-                Select your industry
+              <option value=""> Select your industry
               </option>
               <option value="Engineering">Engineering</option>
               <option value="Product Management">Product Management</option>
