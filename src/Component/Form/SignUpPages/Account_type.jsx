@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Account_type( {data, setData} ) {
+export default function Account_type( {details, setDetails} ) {
 
   return (
     <div>
@@ -26,14 +26,14 @@ export default function Account_type( {data, setData} ) {
           </div>
 
           <div className="flex gap-[12px] flex-col">
-            { data.account_type == "Business" ? 
+            { details.account_type == "Business" ? 
             <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
               <div className="flex items-center gap-[8px]">
                 <input
                   type="radio"
                   name="registration purpose"
                   value="Business"
-                  onChange={(e)=>setData({...data, account_type: e.target.value})}
+                  onChange={(e)=>setDetails({...details, account_type: e.target.value})}
                   className="w-[32px] h-[32px]"
                 />
                 <span className="text-[18px] font-[500]">A business</span>
@@ -50,7 +50,7 @@ export default function Account_type( {data, setData} ) {
                   type="radio"
                   name="registration purpose"
                   value="Business"
-                  onChange={(e)=>setData({...data, account_type: e.target.value})}
+                  onChange={(e)=>setDetails({...details, account_type: e.target.value})}
                   className="w-[32px] h-[32px]"
                 />
                 <span className="text-[18px] font-[500]">A business</span>
@@ -64,14 +64,14 @@ export default function Account_type( {data, setData} ) {
 
             
 
-            { data.account_type == "Individual" ?
+            { details.account_type == "Individual" ?
             <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
             <div className="flex items-center gap-[8px]">
               <input
                 type="radio"
                 name="registration purpose"
                 value="Individual"
-                onChange={(e)=>setData({...data, account_type: e.target.value})}
+                onChange={(e)=>setDetails({...setDetails, account_type: e.target.value})}
                 className="w-[32px] h-[32px]"
               />
               <span className="text-[18px] font-[500]">An Individual</span>
@@ -88,7 +88,7 @@ export default function Account_type( {data, setData} ) {
                   type="radio"
                   name="registration purpose"
                   value="Individual"
-                  onChange={(e)=>setData({...data, account_type: e.target.value})}
+                  onChange={(e)=>setDetails({...setDetails, account_type: e.target.value})}
                   className="w-[32px] h-[32px]"
                 />
                 <span className="text-[18px] font-[500]">An Individual</span>

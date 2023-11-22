@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 
-export default function PersonalDetails({data, setData}) {
+export default function PersonalDetails({details, setDetails}) {
 
   const [password, setPassword] = useState(false)
-  console.log(password)
 
 
   return (
@@ -28,7 +27,6 @@ export default function PersonalDetails({data, setData}) {
 
           {/* form details */}
           <div className="my-[40px]">
-            <form action="">
               <div className="flex flex-col gap-[30px] mb-[32px]">
                 <div className="flex gap-[13px]">
                   <div>
@@ -40,7 +38,7 @@ export default function PersonalDetails({data, setData}) {
                     </label>
                     <input
                       type="text"
-                      onChange={(e)=>setData({...data, first_name: e.target.value})}
+                      onChange={(e)=>setDetails({...details, first_name: e.target.value})}
                       name="First name"
                       id=""
                       placeholder="Enter your first name"
@@ -60,7 +58,7 @@ export default function PersonalDetails({data, setData}) {
                       name="Last name"
                       id=""
                       placeholder="Enter your first name"
-                      onChange={(e)=>setData({...data, last_name: e.target.value})}
+                      onChange={(e)=>setDetails({...details, last_name: e.target.value})}
                       className="h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]"
                     />
                   </div>
@@ -78,7 +76,7 @@ export default function PersonalDetails({data, setData}) {
                     name="email address"
                     id=""
                     placeholder="Enter your email address"
-                    onChange={(e)=>setData({...data, email: e.target.value})}
+                    onChange={(e)=>setDetails({...details, email: e.target.value})}
                     className="h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]"
                   />
                 </div>
@@ -95,7 +93,7 @@ export default function PersonalDetails({data, setData}) {
                     name="password"
                     id=""
                     placeholder="Create a Password"
-                    onChange={(e)=>setData({...data, password: e.target.value})}
+                    onChange={(e)=>setDetails({...details, password: e.target.value})}
                     className="h-[48px] px-[16px] border-[1.2px] border-black w-full text-[18px]"
                   />
 
@@ -119,7 +117,7 @@ export default function PersonalDetails({data, setData}) {
                     name=""
                     id=""
                     value="true"
-                    onChange={(e)=>setData({...data, agree: e.target.value})}
+                    onChange={(e)=>setDetails({...details, agree: e.target.value})}
                     className="w-[24px] h-[24px]"
                   />
                   <p className="text-[16px] font-[400]">
@@ -136,7 +134,6 @@ export default function PersonalDetails({data, setData}) {
               </div>
               
               
-            </form>
           </div>
         </div>
       </div>

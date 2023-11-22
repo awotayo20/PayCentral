@@ -1,5 +1,4 @@
-export default function Job_status({data, setData}) {
-  console.log(data.job_status)
+export default function Job_status({details, setDetails}) {
 
   return (
     <>
@@ -17,7 +16,7 @@ export default function Job_status({data, setData}) {
         <div>
           <div className="flex gap-[12px] flex-col">
 
-          {data.job_status == 'Employed' ?
+          {details.job_status == 'Employed' ?
             <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
             <div className="flex items-center gap-[8px]">
               <input
@@ -25,7 +24,7 @@ export default function Job_status({data, setData}) {
                 name="Job Status"
                 value="Employed"
                 className="employed w-[32px] h-[32px]"
-                onChange={(e)=>setData({...data, job_status: e.target.value})}
+                onChange={(e)=>setDetails({...details, job_status: e.target.value})}
               />
               <span className="text-[18px] font-[500]">Employed</span>
             </div>
@@ -38,7 +37,7 @@ export default function Job_status({data, setData}) {
                   name="Job Status"
                   value="Employed"
                   className="employed w-[32px] h-[32px]"
-                  onChange={(e)=>setData({...data, job_status: e.target.value})}
+                  onChange={(e)=>setDetails({...details, job_status: e.target.value})}
                 />
                 <span className="text-[18px] font-[500]">Employed</span>
               </div>
@@ -50,7 +49,7 @@ export default function Job_status({data, setData}) {
 
 
             
-            {data.job_status == 'Not Employed' ? 
+            {details.job_status == 'Not Employed' ? 
               <div className="w-full px-[16px] py-[6px] bg-black duration-300 text-white">
               <div className="flex items-center gap-[8px]">
                 <input 
@@ -58,7 +57,7 @@ export default function Job_status({data, setData}) {
                   name="Job Status"
                   value="Not Employed"
                   className="w-[32px] h-[32px]"
-                  onChange={(e)=>setData({...data, job_status: e.target.value})}
+                  onChange={(e)=>setDetails({...details, job_status: e.target.value})}
                 />
                 <span className="text-[18px] font-[500]">Not Employed</span>
               </div>
@@ -71,7 +70,7 @@ export default function Job_status({data, setData}) {
                   name="Job Status"
                   value="Not Employed"
                   className="w-[32px] h-[32px]"
-                  onChange={(e)=>setData({...data, job_status: e.target.value})}
+                  onChange={(e)=>setDetails({...details, job_status: e.target.value})}
                 />
                 <span className="text-[18px] font-[500]">Not Employed</span>
               </div>
@@ -81,15 +80,15 @@ export default function Job_status({data, setData}) {
 
             {/* more details for employed */}
 
-            {data.job_status === "Not Employed" && (
+            {details.job_status === "Not Employed" && (
               <div className="flex flex-col gap-[16px]">
                 <h3 className="font-[500] text-[18px]">
                   Please Select Employment type: 
                 </h3>
                 <div>
                   <select
-                    value={data.job_status}
-                    onChange={(e)=> setData({...data, employment_type: e.target.value})}
+                    value={details.job_status}
+                    onChange={(e)=> setDetails({...details, employment_type: e.target.value})}
                     className="w-full"
                   >
                     <option value="">Select an option</option>
@@ -104,14 +103,14 @@ export default function Job_status({data, setData}) {
 
                 <input
                   type="text"
-                  onChange={(e)=>setData({...data, job_role: e.target.value})}
+                  onChange={(e)=>setDetails({...details, job_role: e.target.value})}
                   placeholder="Enter Job role"
                   className="px-[16px] py=[6px] w-full h-[56px] outline-none bg-[#DEDEDE]"
                   required
                 />
                 <input
                   type="text"
-                  onChange={(e)=>setData({...data, country: e.target.value})}
+                  onChange={(e)=>setDetails({...details, country: e.target.value})}
                   placeholder="Enter your location"
                   className="px-[16px] py=[6px] w-full h-[56px] outline-none bg-[#DEDEDE]"
                   required

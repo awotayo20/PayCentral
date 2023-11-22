@@ -1,7 +1,7 @@
 import { set } from "mongoose";
 import { ReactComponent as IndustrySvg } from "../../../images/industry.svg"
 
-export default function Industry({data, setData}) {
+export default function Industry({details, setDetails}) {
   return (
     <div>
         <div className="flex w-[284px] justify-between mx-auto my-[3rem]">
@@ -25,7 +25,7 @@ export default function Industry({data, setData}) {
               
               name="industry"
               id=""
-              onChange={(e)=> setData({...data, industry: e.target.value})}
+              onChange={(e)=>setDetails({...details, account_type: e.target.value})}
               className="industry py-[6px] h-[56px] w-full outline-none bg-[#DEDEDE] text-[18px] font-[500]"
             >
               <option value="">
