@@ -22,7 +22,6 @@ export default function SignUpForm() {
     agree: false,
   });
 
-  console.log(details.account_type);
 
   const titles = ["account_type", "job_Status", "industry", "personal_details"];
 
@@ -52,8 +51,7 @@ export default function SignUpForm() {
   });
 
   let config = {
-    method: 'post',
-    maxBodyLength: Infinity,
+    method: 'POST',
     url: 'https://davidinmichael.pythonanywhere.com/account/register/',
     headers: { 
       'accept': 'application/json', 
@@ -65,10 +63,11 @@ export default function SignUpForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log(data)
 
     try {
-      const response = await axios.request(config);
-      console.log(JSON.stringify(response.data));
+      const response = await axios.post('https://davidinmichael.pythonanywhere.com/account/register/', {data:data});
+      console.log(response.data);
     }
     catch (error) {
       console.log(error);
