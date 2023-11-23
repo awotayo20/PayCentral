@@ -26,7 +26,7 @@ export default function Job_status({details, setDetails}) {
                 className="employed w-[32px] h-[32px]"
                 onChange={(e)=>setDetails({...details, job_status: e.target.value})}
               />
-              <span className="text-[18px] font-[500]">Employed</span>
+              <span className="text-[18px] font-[500]">Not Employed</span>
             </div>
           </div>
           :
@@ -39,7 +39,7 @@ export default function Job_status({details, setDetails}) {
                   className="employed w-[32px] h-[32px]"
                   onChange={(e)=>setDetails({...details, job_status: e.target.value})}
                 />
-                <span className="text-[18px] font-[500]">Employed</span>
+                <span className="text-[18px] font-[500]">Not Employed</span>
               </div>
             </div>
         }
@@ -59,7 +59,7 @@ export default function Job_status({details, setDetails}) {
                   className="w-[32px] h-[32px]"
                   onChange={(e)=>setDetails({...details, job_status: e.target.value})}
                 />
-                <span className="text-[18px] font-[500]">Not Employed</span>
+                <span className="text-[18px] font-[500]">Employed</span>
               </div>
             </div>
             :
@@ -72,7 +72,7 @@ export default function Job_status({details, setDetails}) {
                   className="w-[32px] h-[32px]"
                   onChange={(e)=>setDetails({...details, job_status: e.target.value})}
                 />
-                <span className="text-[18px] font-[500]">Not Employed</span>
+                <span className="text-[18px] font-[500]">Employed</span>
               </div>
             </div>
             }

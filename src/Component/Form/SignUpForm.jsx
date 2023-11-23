@@ -22,7 +22,7 @@ export default function SignUpForm() {
     agree: false,
   });
 
-  console.log(details);
+  console.log(details.account_type);
 
   const titles = ["account_type", "job_Status", "industry", "personal_details"];
 
@@ -40,31 +40,37 @@ export default function SignUpForm() {
 
   // api request
   let data = JSON.stringify({
-    account_type: "Individual",
-    job_status: "Employed",
-    job_role: "frontEnd Developer",
-    country: "Nigeria",
-    industry: "Engineering",
-    email: "sammy4gsus@gmail.com",
-    password: "Awotayo6674",
+    account_type: `${details.account_type}`,
+    job_status: `${details.job_status}`,
+    job_role: `${details.job_role}`,
+    country: `${details.country}`,
+    industry: `${details.industry}`,
+    email: `${details.email}`,
+    password: `${details.password}`,
   });
 
-  function handleSubmit(e) {
+  let config = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: 'https://davidinmichael.pythonanywhere.com/account/register/',
+    headers: { 
+      'accept': 'application/json', 
+      'Content-Type': 'application/json', 
+      'X-CSRFToken': 'AleZdqHdzjgYO9ZXdzBedZxkQDwrEe9pMqyPk3oAYJVAhV9EWJTZ5N3c6pmsgnZE'
+    },
+    data : data
+  };
+
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    axios
-      .post("https://davidinmichael.pythonanywhere.com/account/register/", {
-        maxBodyLength: Infinity,
-        headers: {
-          accept: "application/json",
-          "Content-Type": "application/json",
-          "X-CSRFToken":
-            "AleZdqHdzjgYO9ZXdzBedZxkQDwrEe9pMqyPk3oAYJVAhV9EWJTZ5N3c6pmsgnZE",
-        },
-        data: data,
-      })
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+    try {
+      const response = await axios.request(config);
+      console.log(JSON.stringify(response.data));
+    }
+    catch (error) {
+      console.log(error);
+    }
   }
 
   return (
