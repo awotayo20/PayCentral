@@ -45,6 +45,8 @@ export default function SignUpForm() {
     job_role: `${details.job_role}`,
     country: `${details.country}`,
     industry: `${details.industry}`,
+    first_name: `${details.first_name}`,
+    last_name: `${details.last_name}`,
     email: `${details.email}`,
     password: `${details.password}`,
   });
