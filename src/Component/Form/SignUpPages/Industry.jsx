@@ -23,16 +23,21 @@ export default function Industry({details, setDetails}) {
             </p>
 
             <select
-              name="industry"
-              // onChange={(e)=> setDetails({...details, industry: e.target.value})}
-              onChange={(e)=>setDetails({...details, industry: e.target.value})}
+
+              onChange={(e)=> setDetails({...details, industry_type: e.target.value})}
+
 
               className="industry py-[6px] h-[56px] w-full outline-none bg-[#DEDEDE] text-[18px] font-[500]"
             >
               <option value=""> Select your industry
               </option>
-              <option value="Engineering">Engineering</option>
-              <option value="Product Management">Product Management</option>
+              <option value="Engineering"
+              onSelect={(e)=> setDetails({...details, industry_type: e.target.value})}
+              
+              >Engineering</option>
+              <option value="Product Management"
+              onSelect={(e)=> setDetails({...details, industry_type: e.target.value})}
+              >Product Management</option>
               <option value="Design">Design</option>
               <option value="Sales">Sales</option>
               <option value="Data Science">Data Science</option>

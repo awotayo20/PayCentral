@@ -14,7 +14,7 @@ export default function SignUpForm() {
     employment_type: "",
     job_role: "",
     country: "",
-    industry: "",
+    industry_type: "",
     first_name: "",
     last_name: "",
     email: "",
@@ -42,12 +42,14 @@ export default function SignUpForm() {
     account_type: `${details.account_type}`,
     job_status: `${details.job_status}`,
     job_role: `${details.job_role}`,
+    employment_type: `${details.employment_type}`,
     country: `${details.country}`,
     industry: `${details.industry}`,
     first_name: `${details.first_name}`,
     last_name: `${details.last_name}`,
     email: `${details.email}`,
     password: `${details.password}`,
+    agree: details.agree  
   });
 
   let config = {
@@ -73,6 +75,9 @@ export default function SignUpForm() {
       console.log(error);
     }
   }
+
+  console.log(details.industry)
+  console.log(details.employment_type)
 
   return (
     <>

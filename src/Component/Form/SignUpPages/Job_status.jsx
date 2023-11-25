@@ -87,7 +87,6 @@ export default function Job_status({details, setDetails}) {
                 </h3>
                 <div>
                   <select
-                    value={details.job_status}
                     onChange={(e)=> setDetails({...details, employment_type: e.target.value})}
                     className="w-full"
                   >

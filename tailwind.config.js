@@ -11,7 +11,8 @@ export const theme = {
     'display': ['Oswald'],
     'body': ['"Open Sans"'],
     'Bebas_Neue': ['Bebas Neue', 'sans-serif'],
-    'outfit': ['Outfit', 'sans-serif']
+    'outfit': ['Outfit', 'sans-serif'],
+    'Spline-Sans' : ['Spline Sans', 'sans-serif']
   }
 };
 export const plugins = [];

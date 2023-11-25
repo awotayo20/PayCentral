@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { ReactComponent as DropDownArrow } from "./../../images/arrowDown.svg";
 
-export default function header() {
+export default function Header() {
+  const [dropDown, setDropDown] = useState(false)
+  console.log(dropDown)
+
   return (
-    <div className="header h-[68px] w-full">
+    <div className="header h-[68px] w-full flex items-center justify-evenly">
       <h2 className="font-[500] text-2xl text-[#464646]">Pay Central</h2>
 
       <form className="relative">
         <input
-          placeholder="Search payment..."
+          placeholder="Search services, categories, industry..."
           type="text"
-          className=" border-[1.2px] border-solid border-[#A0A0A0] w-[240px] p-[8px] pl-8"
+          className=" border-[1.2px] border-solid border-[#A0A0A0] w-[336px] p-[8px] pl-8"
         />
         <AiOutlineSearch
           size={24}
@@ -21,11 +25,12 @@ export default function header() {
 
       <div className="menuList">
         <ul>
-          <li>Home</li>
           <li>Why PayCentral</li>
           <li>Product</li>
-          <li>Developers</li>
           <li>Resources</li>
+          <li 
+          onClick={(e)=> setDropDown(!dropDown)}
+          className="flex items-center gap-[8px]">Categories <span><DropDownArrow /></span></li>
         </ul>
       </div>
 
@@ -54,7 +59,7 @@ export default function header() {
             </svg>
           </div>
         </button>
-        <Link to='/SignUp'>
+        <Link to='/SignUpForm'>
           <button className="text-[#fff] bg-[#464646] p-[8px]"><a href="/SignUp">Sign Up</a></button>
         </Link>
         
