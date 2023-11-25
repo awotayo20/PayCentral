@@ -8,7 +8,7 @@ export default function Header() {
   console.log(dropDown)
 
   return (
-    <div className="header h-[68px] min-w-[1024px] w-full flex items-center justify-evenly">
+    <div className="header h-[68px] min-w-[1024px] flex items-center justify-evenly">
       <h2 className="font-[500] text-2xl text-[#464646]">Pay Central</h2>
 
       <form className="relative">
