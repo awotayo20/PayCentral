@@ -84,7 +84,7 @@ export default function Main() {
           <PaymentMethod
           companyLogo={<img src={SquareLogo} alt="Square"/>}
           companyName={'Square'}
-          shortBio={'Take Control of Your Crypto & NFTs with Core'}
+          shortBio={'Take Control of Your Crypto & NFTs with Core.'}
           />
           
         </div>
