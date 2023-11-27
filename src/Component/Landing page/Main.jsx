@@ -86,7 +86,6 @@ export default function Main() {
           companyName={'Square'}
           shortBio={'Take Control of Your Crypto & NFTs with Core.'}
           />
-          
         </div>
       </div>
     </div>
