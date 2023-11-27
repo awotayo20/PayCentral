@@ -1,9 +1,14 @@
 import { ReactComponent as SearchIcon } from "./../../images/searchIcon.svg";
 import { ReactComponent as WorldGlobe } from "./../../images/WorldGlobe.svg";
 import { ReactComponent as DropDown } from "./../../images/dropdown.svg";
+import { ReactComponent as ArrowRight } from "./../../images/arrow-right.svg";
 import { ReactComponent as BookMark } from "./../../images/bookmark.svg";
 import { ReactComponent as FillStar } from "./../../images/starFill.svg";
 import { ReactComponent as EmptyStar } from "./../../images/starEmpty.svg";
+import { ReactComponent as User } from "./../../images/user.svg";
+import { ReactComponent as Mail } from "./../../images/mail.svg";
+import { ReactComponent as MapPin } from "./../../images/map-pin.svg";
+import { ReactComponent as Calendar } from "./../../images/calendar.svg";
 import MoneyPointLogo from "./../../images/moneyPointLogo.png"
 import HeartLandLogo from "./../../images/HeartLandLogo.png"
 import StripeLogo from "./../../images/StripeLogo.png"
@@ -88,6 +93,13 @@ export default function Main() {
           />
         </div>
       </div>
+      <div className="bg-[#F5F3F3]">
+        <div className="w-[492px]">
+        <Waitlist />
+        <DisplayCard/>
+        <Rating/>
+        </div>
+      </div>
     </div>
   );
 }
@@ -145,3 +157,100 @@ export const PaymentMethod = ({companyLogo, companyName, shortBio}) => {
     </div>
   );
 };
+
+
+
+
+
+export const Waitlist = () => {
+  return (
+    <div className="w-[492px] px-[16px] py-[24px] flex flex-col gap-[16px] mb-[10px] bg-white">
+      <div className="w-[457px]">
+      <h2 className="font-Spline-Sans my-[8px] font-[600] text-[20px]">👋🏽 Join the waitlist</h2>
+      <p className="font-Spline-Sans font-[400] text-[16px] text-[#736D6D] leading-[24px]">Secure your spot on our exclusive waitlist for early access to the finest payment curation experience.</p>
+      </div>
+      <div className="flex flex-col gap-[8px] relative">
+        <input type="text" placeholder="Full Name" className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"/>
+        <User className="absolute top-[9px] left-[16px]"/>
+        <input type="email" placeholder="Enter email" className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"/>
+        <Mail className="absolute bottom-[62px] left-[16px]"/>
+        <button className="flex justify-center items-center gap-[8px] w-full h-[44px] bg-[#E35669] text-white font-Spline-Sans font-[600] text-[18px]"> <h3>Join the waitlist</h3>{" "}<ArrowRight/></button>
+      </div>
+    </div>
+  )
+}
+
+
+
+
+
+export const DisplayCard = () => {
+  return (
+    <div className="w-full py-[32px] px-[24px] bg-white">
+      <div className="flex flex-col items-center justify-center mb-[24px]">
+        <img src={HeartLandLogo} alt="" className="w-[124px] h-[130px]"/>
+        <h2 className="text-[#403A3A] text-[24px] font-[600] leading-[32px] mt-[16px] mb-[8px]">Heartland Payment Processing</h2>
+        <p className="text-[#4C4848] font-[400] text-[16px] font-Spline-Sans mb-[6px]">Heartland Payment Systems</p>
+        <div className="flex gap-[6px]">
+          <div className="px-[8px] bg-[#F3F3F3] h-[28px] flex gap-[4px] justify-center items-center rounded-full">
+          <MapPin/>
+          <h2 className="font-[500] text-[12px] leading-[20px]">United States</h2>
+          </div>
+
+          <div className="px-[8px] bg-[#F3F3F3] h-[28px] flex gap-[4px] justify-center items-center rounded-full">
+          <Calendar/>
+          <h2 className="font-[500] text-[12px] leading-[20px]">1997</h2>
+          </div>
+        </div>
+      </div>
+      <div className="my-[24px]">
+        <h2 className="font-Spline-Sans font-[600] text-[#403A3A]">ABOUT</h2>
+        <p className=" font-Spline-Sans text-[16px] leading-[24px] font-[400] mt-[8px] text-[#4C4848]">Heartland Payment Processing allows businesses to accept payments anywhere, anytime, on any device. Whether in the store or on the go, Heartland turns more shoppers into buyers and processes payments securely and quickly.</p>
+      </div>
+      <div className="my-[24px] w-[444px] text-[#403A3A]">
+        <h2 className="font-Spline-Sans font-[600] uppercase">Target Audience</h2>
+        <p className=" font-Spline-Sans text-[16px] leading-[24px] font-[400] mt-[8px] text-[#4C4848]">Designed to assist <span className="font-[500]"> medical practices, local governments, </span>and <span className="font-[500]">utility providers </span>with an integrated payment processing solution.</p>
+      </div>
+      <div className="flex justify-between">
+      <div className="w-[368px] h-[48px] bg-[#F7E0E2] flex items-center">
+        <h3 className="text-[#E35669] font-[600] text-[18px] w-full text-center">View All</h3>
+      </div>
+      <div className="w-[48px] h-[48px] bg-[#FAFAFA] flex justify-center items-center">
+          <h3 className="text-[24px] font-outfit">•••</h3>
+        </div>
+    </div>
+      </div>
+  )
+}
+
+
+
+
+export const Rating = () => {
+  return (
+    <div className="w-full py-[32px] px-[24px] bg-white flex flex-col gap-[24px]">
+      <div>
+        <h2 className="text-[18px] font-Spline-Sans font-[600] text-[#403A3A] mb-[16px]">RATINGS</h2>
+        <div className="flex justify-between">
+          <h3 className="text-[#4C4848] font-Spline-Sans text-[18px] font-[500]">Ease of Use</h3>
+          <div className="flex items-center gap-[8px] text-[16px] font-Spline-Sans font-[600] text-[#4C4848]"><FillStar/><span>3/5</span></div>
+        </div>
+      </div>
+      <div className="flex justify-between">
+          <h3 className="text-[#4C4848] font-Spline-Sans text-[18px] font-[500]">Customer Support</h3>
+          <div className="flex items-center gap-[8px] text-[16px] font-Spline-Sans font-[600] text-[#4C4848]"><FillStar/><span>4/5</span></div>
+        </div>
+        <div className="flex justify-between">
+          <h3 className="text-[#4C4848] font-Spline-Sans text-[18px] font-[500]">Quick Payment</h3>
+          <div className="flex items-center gap-[8px] text-[16px] font-Spline-Sans font-[600] text-[#4C4848]"><FillStar/><span>4/5</span></div>
+        </div>
+        <div className="flex justify-between">
+          <h3 className="text-[#4C4848] font-Spline-Sans text-[18px] font-[500]">Value for Money</h3>
+          <div className="flex items-center gap-[8px] text-[16px] font-Spline-Sans font-[600] text-[#4C4848]"><FillStar/><span>4/5</span></div>
+        </div>
+    </div>
+  )
+}
+
+
+
