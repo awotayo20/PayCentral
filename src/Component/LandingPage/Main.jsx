@@ -17,10 +17,18 @@ import SquareLogo from "./../../images/SquareLogo.png"
 import Ng from "./../../images/ng.svg"
 import Be from "./../../images/be.svg"
 import Gh from "./../../images/gh.svg"
+import Venmo from "./../../images/venmoLogo.png"
+import Payoneer from "./../../images/PayoneerLogo.png"
+import Vagaro from "./../../images/VagaroLogo.png"
+import Pic1 from "./../../images/pic1.png"
+import Pic2 from "./../../images/pic2.png"
+import Pic3 from "./../../images/pic3.png"
+
+
 export default function Main() {
   return (
-    <div className="">
-      <div className="bg-[#FAFAFA] pt-[70px] px-[40px] flex flex-col gap-[50px]">
+    <div className="flex">
+      <div className="bg-[#FAFAFA] pt-[70px] px-[15px] flex flex-col gap-[50px]">
         <div className="w-[754px] flex flex-col gap-[32px]">
           <div className="w-[607px] font-Spline-Sans flex flex-col gap-[8px]">
             <h2 className="font-[700] text-[40px] leading-[48px]">
@@ -93,11 +101,29 @@ export default function Main() {
           />
         </div>
       </div>
-      <div className="bg-[#F5F3F3]">
-        <div className="w-[492px]">
-        <Waitlist />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div className="bg-[#F5F3F3] flex justify-center flex-col px-[40px] pt-[70px]">
+        <div className="w-[492px] flex flex-col gap-y-[40px] justify-center">
+      <Waitlist />
         <DisplayCard/>
         <Rating/>
+        <TopAlternative />
+        <PaymentProcessing/>
         </div>
       </div>
     </div>
@@ -162,6 +188,7 @@ export const PaymentMethod = ({companyLogo, companyName, shortBio}) => {
 
 
 
+
 export const Waitlist = () => {
   return (
     <div className="w-[492px] px-[16px] py-[24px] flex flex-col gap-[16px] mb-[10px] bg-white">
@@ -205,13 +232,13 @@ export const DisplayCard = () => {
       </div>
       <div className="my-[24px]">
         <h2 className="font-Spline-Sans font-[600] text-[#403A3A]">ABOUT</h2>
-        <p className=" font-Spline-Sans text-[16px] leading-[24px] font-[400] mt-[8px] text-[#4C4848]">Heartland Payment Processing allows businesses to accept payments anywhere, anytime, on any device. Whether in the store or on the go, Heartland turns more shoppers into buyers and processes payments securely and quickly.</p>
+        <p className="text-justify font-Spline-Sans text-[16px] leading-[24px] font-[400] mt-[8px] text-[#4C4848]">Heartland Payment Processing allows businesses to accept payments anywhere, anytime, on any device. Whether in the store or on the go, Heartland turns more shoppers into buyers and processes payments securely and quickly.</p>
       </div>
-      <div className="my-[24px] w-[444px] text-[#403A3A]">
+      <div className="my-[24px] text-[#403A3A]">
         <h2 className="font-Spline-Sans font-[600] uppercase">Target Audience</h2>
-        <p className=" font-Spline-Sans text-[16px] leading-[24px] font-[400] mt-[8px] text-[#4C4848]">Designed to assist <span className="font-[500]"> medical practices, local governments, </span>and <span className="font-[500]">utility providers </span>with an integrated payment processing solution.</p>
+        <p className=" text-justify font-Spline-Sans text-[16px] leading-[24px] font-[400] mt-[8px] text-[#4C4848]">Designed to assist <span className="font-[500]"> medical practices, local governments, </span>and <span className="font-[500]">utility providers </span>with an integrated payment processing solution.</p>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between  gap-[24px]">
       <div className="w-[368px] h-[48px] bg-[#F7E0E2] flex items-center">
         <h3 className="text-[#E35669] font-[600] text-[18px] w-full text-center">View All</h3>
       </div>
@@ -251,6 +278,112 @@ export const Rating = () => {
     </div>
   )
 }
+
+
+
+
+
+
+
+export const TopAlternative = () => {
+  return (
+    <div className="py-[32px] px-[24px]  bg-white">
+      <h2 className="text-[18px] font-Spline-Sans text-[#403A3A] font-[600] uppercase">Top alternatives</h2>
+      <TopAlternativeContents
+      header={"Venmo"}
+      shortBio={"Short bio: Lorem ipsum dolor sit amet consectetur. Donec quam donec vitae lectus adipiscing"}
+      starRate={"3/5 (22K)"}
+      logo={Venmo}
+      />
+      <div className="w-full border-[1px] bg-[#EEEEEE]"></div>
+      <TopAlternativeContents
+      header={"Payoneer"}
+      shortBio={"Short bio: Lorem ipsum dolor sit amet consectetur. Donec quam donec vitae lectus adipiscing"}
+      starRate={"3/5 (12K)"}
+      logo={Payoneer}
+      />
+      <div className="w-full border-[1px] bg-[#EEEEEE]"></div>
+      <TopAlternativeContents
+      header={"Vagaro"}
+      shortBio={"Short bio: Lorem ipsum dolor sit amet consectetur. Donec quam donec vitae lectus adipiscing"}
+      starRate={"3/5 (3.2K)"}
+      logo={Vagaro}
+      />
+      <button className="h-[48px] bg-[#FAE8EB] flex items-center justify-center w-full mt-[8px]">
+        <h3 className="text-[18px] font-Spline-Sans font-[500] text-[#E04459]">View All Alternatives</h3>
+      </button>
+    </div>
+
+  )
+}
+
+
+export const TopAlternativeContents = ({header, shortBio, starRate, logo}) => {
+  return (
+    
+      <div className="flex justify-between items-center">
+        <div className="w-[282px] my-[16px]">
+        <h3 className="font-[500] font-Spline-Sans text-[18px] text-[#403A3A]">{header}</h3>
+        <p className="text-[14px] font-Spline-Sans font-[400] overflow-hidden whitespace-nowrap hover:whitespace-normal text-ellipsis hover:overflow-visible">{shortBio}</p>
+        <div className="bg-[#F9F9F9] flex items-center gap-[8px] justify-center py-[4px] rounded-full w-[148px] mt-[12px]">
+          <div className="flex gap-[4px]">
+            <FillStar/>
+            <FillStar/>
+            <FillStar/>
+            <FillStar/>
+            <EmptyStar/>
+          </div>
+          <h3 className="text-[12px] text-[#303538] font-[500]">{starRate}</h3>
+        </div>
+        </div>
+       
+        <div className="w-[64px] h-[64px]">
+        <img src={logo} alt="" />
+        </div>
+      </div>
+  )
+}
+
+
+
+export const PaymentProcessing = () => {
+  return (
+    <div className="py-[32px] px-[24px] bg-white">
+      <h2 className="text-[18px] font-[600] font-Spline-Sans">LATEST ON HEARTLAND PAYMENT PROCESSING</h2>
+        <PaymentProcessingContents
+        content={"Heartland plans to integrate AI in its process to make comparison better and quicker."}
+        timeRead={"12 min read"}
+        pic={Pic1}
+        />
+        <PaymentProcessingContents
+        content={"Welcome the new partners of Heartland payment process and learn what this means for your payments."}
+        timeRead={"12 min read"}
+        pic={Pic2}
+        />
+        <PaymentProcessingContents
+        content={"Heartland CEO leaves the company as the company appoints new leader."}
+        timeRead={"12 min read"}
+        pic={Pic3}
+        />
+    </div>
+  )
+}
+
+export const PaymentProcessingContents = ({content, timeRead, pic}) => {
+  return (
+    <div className="flex justify-between items-center mt-[16px]">
+      <div className="w-[282px]">
+      <h3 className="text-[#4C4848] text-[16px] font-[500] line-clamp-2">{content}</h3>
+      <div className="bg-[#F5F3F3] w-[78px] h-[22px] flex justify-center items-center mt-[12px] rounded-full">
+        <h3 className="text-[#303538] text-[12px] font-Spline-Sans ">{timeRead}</h3>
+      </div>
+      </div>
+      <img src={pic} alt="" className="w-[80px] h-[64px] bg-slate-300"/>
+    </div>
+  )
+}
+
+
 
 
 
