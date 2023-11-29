@@ -49,8 +49,8 @@ export default function Header() {
       onClick={(e)=>setWaitlist(!waitlist)}
       className="fixed z-50 top-0 bottom-0 bg-black/50 w-full duration-150">
       <div className="fixed left-[50%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300">
-        <div className="bg-[#F5F3F3] p-6 text-center">
-          <h2 className="font-[600] text-[32px] font-Spline-Sans">
+        <div className="bg-[#F5F3F3] px-[139px] py-[170px] text-center">
+          <h2 className="font-[600] text-[29px] font-Spline-Sans">
             👋🏽 Join the waitlist for PayCentral
           </h2>
           <p className="w-[457px]">
