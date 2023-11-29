@@ -57,19 +57,19 @@ export default function Header() {
             Secure your spot on our exclusive waitlist for early access to the
             finest payment curation experience.
           </p>
-          <div className="flex flex-col gap-[8px] relative mt-[24px]">
+          <div className="flex flex-col gap-[8px] relative mt-[24px] px-[16px]">
             <input
               type="text"
               placeholder="Full Name"
               className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"
             />
-            <User className="absolute top-[9px] left-[16px]" />
+            <User className="absolute top-[9px] left-[32px]" />
             <input
               type="email"
               placeholder="Enter email"
               className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"
             />
-            <Mail className="absolute bottom-[62px] left-[16px]" />
+            <Mail className="absolute bottom-[62px] left-[32px]" />
             <button className="flex justify-center items-center gap-[8px] w-full h-[44px] bg-[#E35669] text-white font-Spline-Sans font-[600] text-[18px]">
               {" "}
               <h3>Join the waitlist</h3> <ArrowRight />
