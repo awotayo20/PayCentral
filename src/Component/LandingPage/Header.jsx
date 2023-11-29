@@ -6,10 +6,44 @@ import { ReactComponent as Mail } from "./../../images/mail.svg";
 import { ReactComponent as ArrowRight } from "./../../images/arrow-right.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { WaitList } from "./WaitList";
+import React, { useEffect } from 'react';
+import axios from "axios";
 
 export default function Header() {
   const [waitlist, setWaitlist] = useState(false);
+  
+
+  const handleClick = async () => {
+    try {
+      const csrfToken = 'di94qpGDLYi5pCqd9S3osQL4qdfLKmOzpntUx2n0aoXHSoAUS2l9kEhWGZ5MmvEO';
+      const data = {
+        full_name: 'Buka Grace',
+        email: 'grace@gmail.com'
+      };
+
+      const headers = {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrfToken
+      };
+
+      const response = await axios.post('https://davidinmichael.pythonanywhere.com/account/waitlist/', data, {
+        headers: headers
+      });
+
+      console.log('Response:', response.data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  useEffect(() => {
+    // This useEffect block will run on component mount or any state change,
+    // you can adjust the dependency array based on your requirement
+    // e.g., empty array for running once on mount
+
+    // Example: handleClick(); // if you want the API call to be made on component mount
+  }, []);
+  
   return (
     <div>
       <div className="sm:w-full lg:min-w-[1024px] h-[80px] flex items-center justify-around">
@@ -70,7 +104,9 @@ export default function Header() {
               className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"
             />
             <Mail className="absolute bottom-[62px] left-[32px]" />
-            <button className="flex justify-center items-center gap-[8px] w-full h-[44px] bg-[#E35669] text-white font-Spline-Sans font-[600] text-[18px]">
+            <button 
+            onClick={handleClick}
+            className="flex justify-center items-center gap-[8px] w-full h-[44px] bg-[#E35669] text-white font-Spline-Sans font-[600] text-[18px]">
               {" "}
               <h3>Join the waitlist</h3> <ArrowRight />
             </button>
