@@ -33,7 +33,7 @@ import Pic3 from "./../../images/pic3.png";
 export default function Main() {
   return (
     <div className="flex justify-center">
-      <div className="pt-[70px] px-[15px] flex flex-col gap-[50px]">
+      <div className="py-[70px] px-[15px] flex flex-col gap-[50px]">
         <div className="w-[754px] flex flex-col gap-[32px]">
           <div className="w-[607px] font-Spline-Sans flex flex-col gap-[8px]">
             <h2 className="font-[700] text-[40px] leading-[48px]">
