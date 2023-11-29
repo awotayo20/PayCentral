@@ -16,9 +16,10 @@
   --font-Spline: 'Spline Sans', sans-serif;
 }
 
-/* body {
+body {
   overflow-x: hidden;
-} */
+  background-color: #FAFAFA;
+}
 
 
 
