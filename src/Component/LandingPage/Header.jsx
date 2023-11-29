@@ -36,13 +36,7 @@ export default function Header() {
     }
   };
 
-  useEffect(() => {
-    // This useEffect block will run on component mount or any state change,
-    // you can adjust the dependency array based on your requirement
-    // e.g., empty array for running once on mount
-
-    // Example: handleClick(); // if you want the API call to be made on component mount
-  }, []);
+  
   
   return (
     <div>
