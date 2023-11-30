@@ -32,10 +32,10 @@ import Pic3 from "./../../images/pic3.png";
 
 export default function Main() {
   return (
-    <div className="flex justify-center">
-      <div className="py-[70px] px-[15px] flex flex-col gap-[50px]">
-        <div className="w-[754px] flex flex-col gap-[32px]">
-          <div className="w-[607px] font-Spline-Sans flex flex-col gap-[8px]">
+    <div className="flex justify-evenly">
+      <div className="w-[720px] py-[70px] px-[15px] flex flex-col gap-[50px] justify-center">
+        <div className="w-[550px] flex flex-col gap-[32px]">
+          <div className="w-[550px] font-Spline-Sans flex flex-col gap-[8px]">
             <h2 className="font-[700] text-[40px] leading-[48px]">
               Empower Your Global Transactions with PayCentral
             </h2>
@@ -59,7 +59,7 @@ export default function Main() {
           </div>
         </div>
 
-        <div className="w-[754px] flex flex-col gap-[24px]">
+        <div className="w-[100%] flex flex-col gap-[24px]">
           <div className="flex justify-between items-center font-Spline-Sans">
             <h2 className="font-[600] text-[24px]">
               Featured payment products
@@ -111,7 +111,7 @@ export default function Main() {
         <PopularMethod />
       </div>
 
-      <div className="bg-[#F5F3F3] flex justify-center flex-col px-[40px] pt-[70px]">
+      <div className="bg-[#F5F3F3] flex justify-center flex-col px-[40px]">
         <div className="w-[492px] flex flex-col gap-y-[40px] justify-center">
           <Waitlist />
           <DisplayCard />
@@ -128,7 +128,7 @@ export default function Main() {
 
 export const CuratedMethods = () => {
   return (
-    <div className="w-[753px] flex flex-col gap-[24px]">
+    <div className="w-full flex flex-col gap-[24px]">
       <div className="flex justify-between">
         <h2 className=" font-Spline-Sans text-[24px] font-[600]">Free Curated Methods</h2>
         <p className=" font-Spline-Sans text-[#464646] font-[500] flex items-center gap-[8px] text-[16px]">Explore methods curated for you <GreaterThanArrow/></p>
@@ -197,7 +197,7 @@ export const CuratedMethodsContents = ({logo1, logo2, logo3, logo4, name, shortB
 
 export const PopularMethod = () => {
   return (
-    <div className="w-[753px] flex flex-col gap-[24px]">
+    <div className="w-full flex flex-col gap-[24px]">
       <div className="flex justify-between">
         <h2 className=" font-Spline-Sans text-[24px] font-[600]">Popular methods</h2>
         <p className=" font-Spline-Sans text-[#464646] font-[500] flex items-center gap-[8px] text-[16px]">Explore popular methods<GreaterThanArrow/></p>
@@ -329,7 +329,7 @@ export const PaymentMethod = ({ companyLogo, companyName, shortBio }) => {
             <EmptyStar />
           </div>
           <h3 className="text-[12px] text-[#303538] font-Spline-Sans font-[500]">
-            3/5 (1.2K)
+            3/5(1.2K)
           </h3>
         </div>
       </div>

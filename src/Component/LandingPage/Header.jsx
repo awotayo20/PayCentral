@@ -13,80 +13,69 @@ export default function Header() {
   const [waitlist, setWaitlist] = useState(false);
 
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: ''
+    fullName: "",
+    email: "",
   });
-
 
   const [formErrors, setFormErrors] = useState({
-    fullNameError: '',
-    emailError: ''
+    fullNameError: "",
+    emailError: "",
   });
 
-  
-
   const handleClick = async () => {
-
     let errors = {};
     let hasErrors = false;
 
     if (!formData.fullName.trim()) {
-      errors.fullNameError = 'Full Name is required';
+      errors.fullNameError = "Full Name is required";
       hasErrors = true;
     }
 
     if (!formData.email.trim()) {
-      errors.emailError = 'Email is required';
+      errors.emailError = "Email is required";
       hasErrors = true;
-    } else if (!formData.email.includes('@')) {
-      errors.emailError = 'Please enter a valid email';
+    } else if (!formData.email.includes("@")) {
+      errors.emailError = "Please enter a valid email";
       hasErrors = true;
     }
 
     if (hasErrors) {
       setFormErrors(errors);
-    } else{
+    } else {
       try {
-      const csrfToken = 'di94qpGDLYi5pCqd9S3osQL4qdfLKmOzpntUx2n0aoXHSoAUS2l9kEhWGZ5MmvEO';
-      const data = {
-        full_name: `${formData.fullName}`,
-        email: `${formData.email}`
-      };
+        const csrfToken =
+          "di94qpGDLYi5pCqd9S3osQL4qdfLKmOzpntUx2n0aoXHSoAUS2l9kEhWGZ5MmvEO";
+        const data = {
+          full_name: `${formData.fullName}`,
+          email: `${formData.email}`,
+        };
 
-      const headers = {
-          'accept': 'application/json',
-        'Content-Type': 'application/json',
-        'X-CSRFToken': csrfToken
-      };
+        const headers = {
+          accept: "application/json",
+          "Content-Type": "application/json",
+          "X-CSRFToken": csrfToken,
+        };
 
-      const response = await axios.post('https://davidinmichael.pythonanywhere.com/account/waitlist/', data, {
-        headers: headers
-      });
-      alert(response.data.message)
-      console.log('Response:', response.data.message);
-    } catch (error) {
-      console.error(error.message);
-      // alert("wait list with this email already exists.")
-      if(error.message == "Request failed with status code 400") {
-        alert("wait list with this email already exists.")
-      } else {
-        alert("Network Error")
+        const response = await axios.post(
+          "https://davidinmichael.pythonanywhere.com/account/waitlist/",
+          data,
+          {
+            headers: headers,
+          }
+        );
+        alert(response.data.message);
+        console.log("Response:", response.data.message);
+      } catch (error) {
+        console.error(error.message);
+        // alert("wait list with this email already exists.")
+        if (error.message == "Request failed with status code 400") {
+          alert("wait list with this email already exists.");
+        } else {
+          alert("Network Error");
+        }
       }
     }
-
-
-     // Reset form after successful submission
-     
-    }
-
-
-
-    
   };
-
-
-
-  
 
   return (
     <div>
@@ -123,15 +112,26 @@ export default function Header() {
           </div>
         </Link>
       </div>
-      {waitlist == false ? "" : <div 
-      onClick={(e)=>setWaitlist(!waitlist)}
-      className="fixed z-20 top-0 bottom-0 bg-black/50 w-full duration-150">
-    </div>}
+      {waitlist == false ? (
+        ""
+      ) : (
+        <div
+          onClick={(e) => setWaitlist(!waitlist)}
+          className="fixed z-20 top-0 bottom-0 bg-black/50 w-full duration-150"
+        ></div>
+      )}
 
-      <div className={waitlist ? "fixed z-30 left-[50%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300" : "fixed z-30 left-[300%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300"}>
-        <CancelButton 
-      onClick={(e)=>setWaitlist(!waitlist)}
-        className="absolute right-3 top-3 cursor-pointer"/>
+      <div
+        className={
+          waitlist
+            ? "fixed z-30 left-[50%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300"
+            : "fixed z-30 left-[300%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300"
+        }
+      >
+        <CancelButton
+          onClick={(e) => setWaitlist(!waitlist)}
+          className="absolute right-3 top-3 cursor-pointer"
+        />
         <div className="bg-[#F5F3F3] p-[48px] text-center">
           <h2 className="font-[600] text-[29px] font-Spline-Sans">
             👋🏽 Join the waitlist for PayCentral
@@ -143,31 +143,37 @@ export default function Header() {
           <div className="flex flex-col gap-[8px] relative mt-[24px] px-[16px]">
             <input
               type="text"
-              onChange={(e)=>{
-                e.preventDefault()
+              onChange={(e) => {
+                e.preventDefault();
 
-                setFormData({...formData, fullName: e.target.value})
+                setFormData({ ...formData, fullName: e.target.value });
               }}
               placeholder="Full Name"
               className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"
             />
-            {formErrors.fullNameError && <span style={{ color: 'red' }}>{formErrors.fullNameError}</span>}
+            {formErrors.fullNameError && (
+              <span style={{ color: "red" }}>{formErrors.fullNameError}</span>
+            )}
             <User className="absolute top-[9px] left-[32px]" />
             <div className="relative">
-            <input
-              type="email"
-              onChange={(e)=>setFormData({...formData, email: e.target.value})}
-              placeholder="Enter email"
-              className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"
-              required
-            />
-            <Mail className="absolute top-[10px] left-[16px]" />
+              <input
+                type="email"
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                placeholder="Enter email"
+                className="font-Spline-Sans w-full h-[44px] pl-[48px] py-[8px] text-[14px] border-[1.6px] border-[#E5E1E1] focus:outline-none leading-[16.59px]"
+                required
+              />
+              <Mail className="absolute top-[10px] left-[16px]" />
             </div>
-            {formErrors.emailError && <span style={{ color: 'red' }}>{formErrors.emailError}</span>}
+            {formErrors.emailError && (
+              <span style={{ color: "red" }}>{formErrors.emailError}</span>
+            )}
             <button
-            
-            onClick={handleClick}
-            className="flex justify-center items-center gap-[8px] w-full h-[44px] bg-[#E35669] text-white font-Spline-Sans font-[600] text-[18px]">
+              onClick={handleClick}
+              className="flex justify-center items-center gap-[8px] w-full h-[44px] bg-[#E35669] text-white font-Spline-Sans font-[600] text-[18px]"
+            >
               {" "}
               <h3>Join the waitlist</h3> <ArrowRight />
             </button>
