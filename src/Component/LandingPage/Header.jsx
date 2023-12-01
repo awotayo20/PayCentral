@@ -8,9 +8,12 @@ import { ReactComponent as CancelButton } from "./../../images/CancelButton.svg"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { ReactComponent as Hamburger } from "./../../images/Hamburger.svg";
 
 export default function Header() {
   const [waitlist, setWaitlist] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  console.log(toggle)
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -80,16 +83,27 @@ export default function Header() {
   return (
     <div>
       <div className="sm:w-full lg:min-w-[1024px] h-[80px] flex items-center justify-between px-[16px] lg:px-[3rem]">
-        <div className="flex gap-[16px]">
+        <div className="flex gap-[16px] items-center">
+        <div className="block lg:hidden">
+          <Hamburger 
+          onClick={(e)=>{setToggle(!toggle)}}
+          className="cursor-pointer block lg:hidden"
+          />
+          <div className="absolute top-[80px] w-full bg-white px-[16px]">
+            <li className=" list-none text-[16px] font-[500] py-[16px]">Why PayCentral</li>
+            <li className=" list-none text-[16px] font-[500] py-[16px] flex items-center justify-between ">Categories <DropDownArrow/></li>
+
+          </div>
+        </div>
           <Logo />
           <h2 className="hidden lg:block font-Spline-Sans text-[24px] font-[700] text-[#E35669]">
-            PayCentral
+            <span className="font-[500]">Pay</span>Central
           </h2>
         </div>
 
-        <div className="hidden lg:flex items-center gap-[32px] text-[16px] font-[500] text-[#332C2D]">
-          <div className="p-[8px]">Why PayCentral</div>
-          <div className="flex items-center gap-[8px] p-[8px]">
+        <div className="hidden lg:flex items-center gap-[32px]">
+          <div className="p-[8px] text-[16px] font-[500] text-[#332C2D]">Why PayCentral</div>
+          <div className="flex items-center gap-[8px] p-[8px] text-[16px] font-[500] text-[#332C2D]">
             Categories{" "}
             <span>
               <DropDownArrow />
@@ -99,15 +113,15 @@ export default function Header() {
 
         <Link to="">
           <div
-            className="bg-[#E35669] text-white px-[16px] py-[8px] flex gap-[8px]
+            className="bg-[#E35669] text-white px-[16px] py-[8px] flex gap-[8px] items-center
         "
             onClick={(e) => {
               setWaitlist(!waitlist);
             }}
           >
-            <h2>Join the waitlist</h2>
+            <h2 className="text-[12px] lg:text-[16px]">Join the waitlist</h2>
             <span>
-              <RightArrow />
+              <RightArrow className="w-[11px] h-[11px] lg:w-[16px] lg:h-[16px]"/>
             </span>
           </div>
         </Link>
