@@ -79,7 +79,7 @@ export default function Header() {
 
   return (
     <div>
-      <div className="sm:w-full lg:min-w-[1024px] h-[80px] flex items-center justify-around">
+      <div className="sm:w-full lg:min-w-[1024px] h-[80px] flex items-center justify-between px-[16px] lg:px-[3rem]">
         <div className="flex gap-[16px]">
           <Logo />
           <h2 className="hidden lg:block font-Spline-Sans text-[24px] font-[700] text-[#E35669]">
@@ -87,7 +87,7 @@ export default function Header() {
           </h2>
         </div>
 
-        <div className="flex items-center gap-[32px] text-[16px] font-[500] text-[#332C2D]">
+        <div className="hidden lg:flex items-center gap-[32px] text-[16px] font-[500] text-[#332C2D]">
           <div className="p-[8px]">Why PayCentral</div>
           <div className="flex items-center gap-[8px] p-[8px]">
             Categories{" "}
