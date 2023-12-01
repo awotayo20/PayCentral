@@ -31,6 +31,7 @@ import Pic2 from "./../../images/pic2.png";
 import Pic3 from "./../../images/pic3.png";
 
 export default function Main() {
+  
   return (
     <div className="flex justify-evenly">
       <div className="w-[720px] py-[70px] px-[15px] flex flex-col gap-[50px] justify-center">
