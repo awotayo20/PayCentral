@@ -29,6 +29,7 @@ import Vagaro from "./../../images/VagaroLogo.png";
 import Pic1 from "./../../images/pic1.png";
 import Pic2 from "./../../images/pic2.png";
 import Pic3 from "./../../images/pic3.png";
+import { WaitingList } from "./WaitingList";
 
 export default function Main() {
   
@@ -254,28 +255,6 @@ export const PopularMethodContents = ({logo, name, moto, operatingIn, services, 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const PaymentMethod = ({ companyLogo, companyName, shortBio }) => {
   return (
     <div className="p-[16px] bg-white flex justify-between">
@@ -350,7 +329,9 @@ export const Waitlist = () => {
           finest payment curation experience.
         </p>
       </div>
-      <div className="flex flex-col gap-[8px] relative">
+      <WaitingList />
+
+      {/* <div className="flex flex-col gap-[8px] relative">
         <input
           type="text"
           placeholder="Full Name"
@@ -367,7 +348,7 @@ export const Waitlist = () => {
           {" "}
           <h3>Join the waitlist</h3> <ArrowRight />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
