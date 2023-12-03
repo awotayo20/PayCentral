@@ -21,7 +21,7 @@ export const Cookie = () => {
   return (
     <>
     {showCookie && (
-        <div className='fixed bottom-0 px-[1rem] lg:px-[80px] py-[40px] bg-[#332C2D] block lg:flex items-center justify-between'>
+        <div className='fixed bottom-0 px-[1rem] lg:px-[80px] py-[40px] bg-[#332C2D] block lg:flex items-center justify-between w-full'>
         <div className="flex gap-[16px] w-full lg:w-[702px] justify-between">
             <div className="w-[40px]">
             <CookieLogo />

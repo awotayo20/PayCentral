@@ -83,19 +83,19 @@ export default function Header() {
       <div
         className={
           waitlist
-            ? "fixed z-30 left-[50%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300"
-            : "fixed z-30 left-[300%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300"
+            ? "fixed z-30 left-[50%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300 opacity-100 w-[90%] lg:w-[589px]"
+            : "fixed z-30 left-[-300%] translate-x-[-50%] translate-y-[-50%] top-[50%] duration-300 opacity-0"
         }
       >
         <CancelButton
           onClick={(e) => setWaitlist(!waitlist)}
           className="absolute right-3 top-3 cursor-pointer"
         />
-        <div className="bg-[#F5F3F3] p-[48px] text-center">
-          <h2 className="font-[600] text-[29px] font-Spline-Sans">
+        <div className="bg-[#F5F3F3] px-[16px] py-[48px] lg:p-[48px] text-center">
+          <h2 className="font-[600] text[24px] lg:text-[29px] font-Spline-Sans">
             👋🏽 Join the waitlist for PayCentral
           </h2>
-          <p className="w-[457px]">
+          <p className="w-full">
             Secure your spot on our exclusive waitlist for early access to the
             finest payment curation experience.
           </p>
