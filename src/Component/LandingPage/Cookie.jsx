@@ -1,9 +1,27 @@
+import { useState } from "react"
 import { ReactComponent as CookieLogo } from "./../../images/CookiesLogo.svg"
+import { PostHog, posthog } from "posthog-js"
 
 export const Cookie = () => {
+    const [showCookie, setShowCookie] = useState(true)
+
+
+    const acceptCookie = () => {
+        setShowCookie(false)
+        posthog.opt_in_capturing();
+    }
+
+    const declineCookie = () => {
+        setShowCookie(false)
+        posthog.opt_out_capturing();
+
+    }
+
+
   return (
     <>
-        <div className='px-[1rem] lg:px-[80px] py-[40px] bg-[#332C2D] block lg:flex items-center justify-between'>
+    {showCookie && (
+        <div className='fixed bottom-0 px-[1rem] lg:px-[80px] py-[40px] bg-[#332C2D] block lg:flex items-center justify-between'>
         <div className="flex gap-[16px] w-full lg:w-[702px] justify-between">
             <div className="w-[40px]">
             <CookieLogo />
@@ -14,10 +32,16 @@ export const Cookie = () => {
             </div>
         </div>
         <div className="flex gap-[16px] mt-[24px]">
-            <button className="w-[168px] py-[16px] border-[2px] border-white text-white">No, I decline</button>
-            <button className="w-[168px] py-[16px] border-[2px] bg-white">Accept all cookies</button>
+            <button 
+            onClick={declineCookie}
+            className="w-[168px] py-[16px] border-[2px] border-white text-white">No, I decline</button>
+            <button 
+            onClick={acceptCookie}
+            className="w-[168px] py-[16px] border-[2px] bg-white">Accept all cookies</button>
         </div>
     </div>
+    )}
+        
     </>
   )
 }

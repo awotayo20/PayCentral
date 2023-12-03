@@ -133,8 +133,8 @@ export const CuratedMethods = () => {
   return (
     <div className="w-full flex flex-col gap-[24px]">
       <div className="flex justify-between">
-        <h2 className=" font-Spline-Sans text-[24px] font-[600]">Free Curated Methods</h2>
-        <p className=" font-Spline-Sans text-[#464646] font-[500] flex items-center gap-[8px] text-[16px]">Explore methods curated for you <GreaterThanArrow/></p>
+        <h2 className=" font-Spline-Sans text-[16px] lg:text-[24px] font-[600]">Free Curated Methods</h2>
+        <p className=" font-Spline-Sans text-[#464646] font-[500] flex items-center gap-[8px] text-[16px] lg:text-[16px]">Explore methods <GreaterThanArrow/></p>
       </div>
       <div className="flex flex-col gap-[24px]">
         <CuratedMethodsContents
@@ -177,7 +177,7 @@ export const CuratedMethodsContents = ({logo1, logo2, logo3, logo4, name, shortB
           <p className="text-[#6A6A6A] text-[14px] font-Spline-Sans font-[500]">Created by:</p>
           <h3 className="text-[#303538] text-[16px] font-Spline-Sans font-[600]">{name}</h3>
           <p className="text-[#6A6A6A] text-[16px] font-Spline-Sans font-[400] my-[8px] line-clamp-1">{shortBio}</p>
-          <div className="flex items-center text-[#736D6D] gap-[8px]">
+          <div className="hidden lg:flex items-center text-[#736D6D] gap-[8px]">
             <img src={Ng} alt="Nigeria" />
             <img src={Gh} alt="Nigeria" />
             <img src={Cm} alt="Nigeria" />
@@ -202,8 +202,8 @@ export const PopularMethod = () => {
   return (
     <div className="w-full flex flex-col gap-[24px]">
       <div className="flex justify-between">
-        <h2 className=" font-Spline-Sans text-[24px] font-[600]">Popular methods</h2>
-        <p className=" font-Spline-Sans text-[#464646] font-[500] flex items-center gap-[8px] text-[16px]">Explore popular methods<GreaterThanArrow/></p>
+        <h2 className=" font-Spline-Sans text-[16px] lg:text-[24px] font-[600]">Popular methods</h2>
+        <p className=" font-Spline-Sans text-[#464646] font-[500] flex items-center gap-[8px] text-[16px]">Explore methods<GreaterThanArrow/></p>
       </div>
       <div className="flex flex-col gap-[24px]">
         <PopularMethodContents
@@ -271,7 +271,7 @@ export const PaymentMethod = ({ companyLogo, companyName, shortBio }) => {
                 {shortBio}
               </p>
             </div>
-            <div className="flex items-center gap-[8px]">
+            <div className="hidden lg:flex items-center gap-[8px]">
               <div className="bg-[#F5F3F3] px-[8px] py-[4px] rounded-[16px] flex justify-center text-[#736D6D] text-[14px] font-[400]">
                 POS
               </div>

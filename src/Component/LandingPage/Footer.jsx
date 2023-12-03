@@ -1,4 +1,5 @@
 import { Cookie } from "./Cookie"
+import { PostHog, posthog } from "posthog-js"
 
 export const Footer = () => {
   return (
@@ -22,7 +23,7 @@ export const Footer = () => {
             <div className='w-[32px] h-[32px] rounded-full bg-[#979797]'></div>
         </div>
     </div>
-    <Cookie/>
+    {posthog.has_opted_in_capturing() || posthog.has_opted_out_capturing() ? null : <Cookie/>}
     </>
   )
 }
