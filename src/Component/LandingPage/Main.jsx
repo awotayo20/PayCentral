@@ -234,9 +234,9 @@ export const PopularMethod = () => {
 export const PopularMethodContents = ({logo, name, moto, operatingIn, services, rating}) => {
   return (
     <div className="p-[16px] w-full flex justify-between bg-white">
-        <div className="flex items-center gap-x-[16px]">
+        <div className="flex gap-x-[16px]">
           <div className="w-[124px] h-[130px]">
-          <img src={logo} alt="" className="w-full h-full"/>
+          <img src={logo} alt="" className=""/>
         </div>
         <div className="w-full">
           <h3 className="text-[#303538] text-[20px] font-Spline-Sans font-[600]">{name}</h3>
