@@ -29,12 +29,12 @@ export default function Header() {
               <li className="px-[16px] list-none text-[16px] font-[500] py-[16px] flex items-center justify-between ">
                 Categories <DropDownArrow />
               </li>
-              <div className="bg-[#F5F3F3] px-[12px] py-[8px] flex justify-end">
+              <div className="bg-[#F7E0E2] px-[12px] py-[8px] flex justify-end">
                 <CancelButton 
                 onClick={(e)=>{
                   e.preventDefault()
                   setToggle(!toggle)}}
-                className="w-[40px] h-[40px]"/>
+                className="w-[40px] h-[40px] cursor-pointer"/>
               </div>
             </div>: ""}
           </div>
