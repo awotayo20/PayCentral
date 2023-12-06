@@ -72,7 +72,7 @@ export default function Header() {
         </Link>
       </div>
       {waitlist == false ? (
-        ""
+        null
       ) : (
         <div
           onClick={(e) => setWaitlist(!waitlist)}
