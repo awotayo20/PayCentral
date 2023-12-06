@@ -8,7 +8,7 @@ import { ReactComponent as CancelBotton } from "./../../images/CancelButton.svg"
 
 
 export const WaitingList = () => {
-  const [showSuccess, setShowSuccess ] = useState(true)
+  const [showSuccess, setShowSuccess ] = useState(false)
   
 
   const [formData, setFormData] = useState({
